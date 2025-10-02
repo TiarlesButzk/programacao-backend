@@ -14,15 +14,14 @@ import br.com.store.backend.model.Produto;
 @RequestMapping("/produto")
 public class ProdutoController {
 
-	
 	@GetMapping
 	public List<Produto> getAll() {
 		Produto p = Produto.builder()
-						.id(UUID.randomUUID())
-						.nome("Bola de Futebol")
-						.qtde(2)
-						.vlrUnitario(BigDecimal.valueOf(150))
-						.build();
+                .id(UUID.randomUUID())
+                .nome("Produto 1")
+                .qtde(10)
+                .vlrUnitario(BigDecimal.valueOf(100))
+                .build();		
 		return List.of(p);
 	}
 }
